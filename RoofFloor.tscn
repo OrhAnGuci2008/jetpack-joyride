@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://he0nimqgm117"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8oisf"]
+size = Vector2(1163, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k67m1"]
+size = Vector2(1155, 30)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1349405687]
+
+[node name="Tak" type="CollisionShape2D" parent="." unique_id=1995916930]
+position = Vector2(571.5, 0)
+shape = SubResource("RectangleShape2D_8oisf")
+
+[node name="Golv" type="CollisionShape2D" parent="." unique_id=563836332]
+position = Vector2(577.5, 658)
+shape = SubResource("RectangleShape2D_k67m1")

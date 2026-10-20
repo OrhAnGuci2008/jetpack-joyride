@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dfuw55tysr648"]
+
+[ext_resource type="Script" uid="uid://j8v175lvvngm" path="res://Game.cs" id="1_u44n3"]
+[ext_resource type="PackedScene" uid="uid://y12hnaui6i1l" path="res://Laser.tscn" id="2_u44n3"]
+[ext_resource type="PackedScene" uid="uid://mtpnkklibq40" path="res://Player.tscn" id="2_xkndl"]
+[ext_resource type="PackedScene" uid="uid://he0nimqgm117" path="res://RoofFloor.tscn" id="4_sb48q"]
+[ext_resource type="PackedScene" uid="uid://de6nu0u8tspad" path="res://GameOver.tscn" id="5_t88pq"]
+
+[node name="Game" type="Node2D" unique_id=292383786]
+script = ExtResource("1_u44n3")
+
+[node name="Player" parent="." unique_id=1889011538 instance=ExtResource("2_xkndl")]
+position = Vector2(88, 341)
+
+[node name="Laser" parent="." unique_id=1307377874 instance=ExtResource("2_u44n3")]
+position = Vector2(486, 366)
+
+[node name="StaticBody2D" parent="." unique_id=1349405687 instance=ExtResource("4_sb48q")]
+
+[node name="GameOver" parent="." unique_id=457330771 instance=ExtResource("5_t88pq")]
+visible = false
+
+[connection signal="Death" from="Player" to="." method="OnPlayerDeath"]

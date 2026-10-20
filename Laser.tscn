@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://y12hnaui6i1l"]
+
+[ext_resource type="Texture2D" uid="uid://ck2i76pf6ggpt" path="res://Laser_Spel.png" id="1_c4r1g"]
+[ext_resource type="Script" uid="uid://dndovnmprmmmx" path="res://Laser.cs" id="1_y3ayh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xkndl"]
+radius = 8.316162
+height = 142.07715
+
+[node name="Laser" type="Area2D" unique_id=1307377874]
+script = ExtResource("1_y3ayh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1690765752]
+position = Vector2(-1.6607871, -1.497178)
+rotation = -0.14137167
+scale = Vector2(0.12587684, 0.11908646)
+texture = ExtResource("1_c4r1g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1387897337]
+rotation = 0.74700093
+shape = SubResource("CapsuleShape2D_xkndl")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://de6nu0u8tspad"]
+
+[ext_resource type="Script" uid="uid://o3p3xg8n1oem" path="res://GameOver.cs" id="1_40baj"]
+
+[node name="GameOver" type="Control" unique_id=457330771]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_40baj")
+
+[node name="GameOverLabel" type="Label" parent="." unique_id=196978992]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 1.0
+offset_right = 379.0
+offset_bottom = 24.0
+theme_override_font_sizes/font_size = 40
+text = "GAME OVER!"
+
+[node name="RestartButton" type="Button" parent="." unique_id=1707908904]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 90.0
+offset_right = 496.0
+offset_bottom = 153.0
+theme_override_font_sizes/font_size = 40
+text = "RESTART
+"
+
+[connection signal="pressed" from="RestartButton" to="." method="OnRestartButtonPressed"]
